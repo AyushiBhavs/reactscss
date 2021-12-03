@@ -1,0 +1,116 @@
+$myFontSize: 16px;
+$primary-Color:#fff;
+$myBorder: 1px solid #e2e1e1;
+$myBorder-radius: 5px;
+$myColor: #277EFC;
+$fadeColor: rgb(195, 194, 194);
+
+@mixin margin-padding {
+  margin: 15px 0;
+  padding: 16px 12px;
+}
+
+@mixin form-main {
+  padding: 40px 50px;
+  width: 500px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+@mixin form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@mixin icon {
+  position: absolute;
+  color: $myColor;
+  font-size: 18px;
+  top: 30px;
+  left: 10px;
+}
+
+body {
+  background: #F2F6FF;
+  color: #31507D;
+}
+
+// .container{
+//    margin-top: 160px;
+// }
+
+.container {
+  @include form-container;
+}
+
+.login-main {
+  @include form-main;
+}
+
+.input-field {
+  @include margin-padding;
+  width: 100%;
+  font-size: $myFontSize;
+}
+
+.form-margin {
+  margin-top: "60px"
+}
+
+.textcenter {
+  text-align: center;
+}
+
+.headingh4 {
+  color: $fadeColor;
+}
+
+.input-flex {
+  position: relative;
+}
+
+.input-text-fields {
+  position: relative;
+  border: $myBorder;
+  border-radius: $myBorder-radius;
+  box-sizing: border-box;
+  padding-left: 34px;
+}
+
+.submitbtn {
+  margin: 20px 0;
+  padding: 18px;
+  border: none;
+  background: #277EFC;
+  color: $primary-Color;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.icon {
+  @include icon;
+}
+
+.resetPassword {
+  color: $myColor;
+  cursor: pointer;
+}
+
+.forgotlink {
+  @include margin-padding;
+  color: $fadeColor;
+  cursor: pointer;
+}
+
+.register-main {
+  @include form-main;
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 50px;
+}
